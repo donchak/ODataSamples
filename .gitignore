@@ -116,3 +116,6 @@ pip-log.txt
 # DB files
 *.mdf
 *.ldf
+/.vs
+*.bak
+/RESTier/TripPinInMemory/.vs

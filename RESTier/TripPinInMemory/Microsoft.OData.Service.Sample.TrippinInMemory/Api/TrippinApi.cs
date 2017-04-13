@@ -31,13 +31,13 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Api
 
         private string Key
         {
-            get { return InMemoryProviderUtils.GetSessionId(); }
+            get { return InMemoryProviderUtils.GetSessionId() ?? "default"; }
         }
 
         public TrippinApi(IServiceProvider serviceProvider) : base(serviceProvider)
         {
         }
-
+       
         #region Entity Set
 
         [Resource]

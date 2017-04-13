@@ -11,7 +11,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Models
 
         [Key]
         public string IcaoCode { get; set; }
-
+        [Key]
         public string IataCode { get; set; }
 
         public AirportLocation Location { get; set; }

@@ -158,6 +158,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Models
                     UserName = "russellwhyte",
                     Gender = PersonGender.Male,
                     Emails = new List<string> { "Russell@example.com", "Russell@contoso.com" },
+                    AverageFlightLength = new TimeSpan(1, 2, 14, 4, 1),
                     AddressInfo = new List<Location>
                     {
                       new Location()
@@ -316,6 +317,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Models
                     UserName = "scottketchum",
                     Gender = PersonGender.Male,
                     Emails = new List<string> { "Scott@example.com" },
+                    AverageFlightLength = new TimeSpan(15, 1, 4, 44, 21),
                     AddressInfo = new List<Location>
                     {
                       new Location()
@@ -454,6 +456,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Models
                     UserName = "ronaldmundy",
                     Gender = PersonGender.Male,
                     Emails = new List<string> { "Ronald@example.com", "Ronald@contoso.com" },
+                    AverageFlightLength = new TimeSpan(100, 21, 11, 21, 15),
                     AddressInfo = new List<Location>
                     {
                       new Location()
@@ -489,6 +492,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Models
                     UserName = "javieralfred",
                     Gender = PersonGender.Male,
                     Emails = new List<string> { "Javier@example.com", "Javier@contoso.com" },
+                    AverageFlightLength = new TimeSpan(2, 50, 14, 0, 98),
                     AddressInfo = new List<Location>
                     {
                       new Location()
@@ -524,6 +528,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Models
                     UserName = "willieashmore",
                     Gender = PersonGender.Male,
                     Emails = new List<string>(),
+                    AverageFlightLength = new TimeSpan(94, 23, 21, 2, 0),
                     AddressInfo = new List<Location>(),
                     Trips = new List<Trip>
                     {
@@ -558,6 +563,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Models
                     UserName = "vincentcalabrese",
                     Gender = PersonGender.Male,
                     Emails = new List<string> { "Vincent@example.com", "Vincent@contoso.com" },
+                    AverageFlightLength = new TimeSpan(42, 10, 2, 32, 10),
                     AddressInfo = new List<Location>
                     {
                       new Location()
@@ -593,6 +599,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Models
                     UserName = "clydeguess",
                     Gender = PersonGender.Male,
                     HomeAddress = new Location(),
+                    AverageFlightLength = new TimeSpan(81, 43, 51, 24, 0),
                     Trips = new List<Trip>()
                 },
                 new Person()
@@ -602,6 +609,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Models
                     UserName = "keithpinckney",
                     Gender = PersonGender.Male,
                     Emails = new List<string> { "Keith@example.com", "Keith@contoso.com" },
+                    AverageFlightLength = new TimeSpan(4, 43, 11, 3, 0),
                     AddressInfo = new List<Location>
                     {
                       new Location()
@@ -637,6 +645,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Models
                     UserName = "marshallgaray",
                     Gender = PersonGender.Male,
                     Emails = new List<string> { "Marshall@example.com", "Marshall@contoso.com" },
+                    AverageFlightLength = new TimeSpan(42, 3, 14, 23, 0),
                     AddressInfo = new List<Location>
                     {
                       new Location()
@@ -672,6 +681,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Models
                     UserName = "ryantheriault",
                     Gender = PersonGender.Male,
                     Emails = new List<string> { "Ryan@example.com", "Ryan@contoso.com" },
+                    AverageFlightLength = new TimeSpan(12, 33, 54, 33, 0),
                     AddressInfo = new List<Location>
                     {
                       new Location()
@@ -707,6 +717,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Models
                     UserName = "elainestewart",
                     Gender = PersonGender.Female,
                     Emails = new List<string> { "Elaine@example.com", "Elaine@contoso.com" },
+                    AverageFlightLength = new TimeSpan(1, 33, 54, 33, 0),
                     AddressInfo = new List<Location>
                     {
                       new Location()
@@ -742,6 +753,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Models
                     UserName = "salliesampson",
                     Gender = PersonGender.Female,
                     Emails = new List<string> { "Sallie@example.com", "Sallie@contoso.com" },
+                    AverageFlightLength = new TimeSpan(20, 14, 14, 3, 20),
                     AddressInfo = new List<Location>
                     {
                       new Location()
@@ -787,6 +799,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Models
                     UserName = "jonirosales",
                     Gender = PersonGender.Female,
                     Emails = new List<string> { "Joni@example.com", "Joni@contoso.com" },
+                    AverageFlightLength = new TimeSpan(35, 12, 4, 43, 10),
                     AddressInfo = new List<Location>
                     {
                       new Location()
@@ -822,6 +835,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Models
                     UserName = "georginabarlow",
                     Gender = PersonGender.Female,
                     Emails = new List<string> { "Georgina@example.com", "Georgina@contoso.com" },
+                    AverageFlightLength = new TimeSpan(95, 2, 24, 39, 0),
                     AddressInfo = new List<Location>
                     {
                       new Location()
@@ -856,6 +870,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Models
                     LastName = "Huffman",
                     UserName = "angelhuffman", Gender = PersonGender.Female,
                     Emails = new List<string> { "Angel@example.com" },
+                    AverageFlightLength = new TimeSpan(25, 2, 24, 39, 0),
                     AddressInfo = new List<Location>
                     {
                       new Location()
@@ -891,6 +906,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Models
                     UserName = "laurelosborn",
                     Gender = PersonGender.Female,
                     Emails = new List<string> { "Laurel@example.com", "Laurel@contoso.com" },
+                    AverageFlightLength = new TimeSpan(15, 22, 44, 9, 30),
                     AddressInfo = new List<Location>
                     {
                       new Location()
@@ -926,6 +942,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Models
                     UserName = "sandyosborn",
                     Gender = PersonGender.Female,
                     Emails = new List<string> { "Sandy@example.com", "Sandy@contoso.com" },
+                    AverageFlightLength = new TimeSpan(10, 2, 4, 1, 3),
                     AddressInfo = new List<Location>
                     {
                       new Location()
@@ -961,6 +978,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Models
                     UserName = "ursulabright",
                     Gender = PersonGender.Female,
                     Emails = new List<string> { "Ursula@example.com", "Ursula@contoso.com" },
+                    AverageFlightLength = new TimeSpan(11, 22, 15, 31, 32),
                     AddressInfo = new List<Location>
                     {
                       new Location()
@@ -996,6 +1014,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Models
                     UserName = "genevievereeves",
                     Gender = PersonGender.Female,
                     Emails = new List<string> { "Genevieve@example.com", "Genevieve@contoso.com" },
+                    AverageFlightLength = new TimeSpan(16, 12, 55, 51, 25),
                     AddressInfo = new List<Location>
                     {
                       new Location()
@@ -1031,6 +1050,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Models
                     UserName = "kristakemp",
                     Gender = PersonGender.Female,
                     Emails = new List<string> { "Krista@example.com" },
+                    AverageFlightLength = new TimeSpan(161, 1, 5, 1, 2),
                     AddressInfo = new List<Location>
                     {
                       new Location()
@@ -1060,6 +1080,10 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Models
                     }
                 }
             });
+
+            for(int i = 0; i < People.Count; i++) {
+                People[i].BirthDate = new DateTime(1960 + (i * 33) % 45, ((i * 1432) % 12) + 1, ((i * 419) % 28) + 1);
+            }
 
             People.Single(p => p.UserName == "russellwhyte").Friends = new Collection<Person>()
                 {
@@ -1164,6 +1188,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Models
                 UserName = "aprilcline",
                 Gender = PersonGender.Female,
                 Emails = new List<string> { "April@example.com", "April@contoso.com" },
+                AverageFlightLength = new TimeSpan(53, 11, 52, 11, 42),
                 AddressInfo = new List<Location>
                 {
                     new Location()

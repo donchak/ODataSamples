@@ -15,7 +15,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory
 
         protected void Application_PostAuthorizeRequest()
         {
-            HttpContext.Current.SetSessionStateBehavior(System.Web.SessionState.SessionStateBehavior.Required);
+            //HttpContext.Current.SetSessionStateBehavior(System.Web.SessionState.SessionStateBehavior.Required);
         }
     }
 }

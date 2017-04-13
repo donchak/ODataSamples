@@ -53,6 +53,10 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Models
 
         public Feature FavoriteFeature { get; set; }
 
+        public System.TimeSpan AverageFlightLength { get; set; }
+
+        public System.DateTime BirthDate { get; set; }
+
         public virtual ICollection<Feature> Features { get; set; }
     }
 }

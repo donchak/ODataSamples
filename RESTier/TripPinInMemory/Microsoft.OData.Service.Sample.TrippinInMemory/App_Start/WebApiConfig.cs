@@ -3,6 +3,7 @@
 
 using System;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.OData;
 using System.Web.OData.Extensions;
 using Microsoft.OData.Service.Sample.TrippinInMemory.Api;
@@ -18,6 +19,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory
             config.SetUseVerboseErrors(true);
             config.MessageHandlers.Add(new ETagMessageHandler());
             config.SetUrlKeyDelimiter(ODataUrlKeyDelimiter.Slash);
+            config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
             RegisterTrippin(config, GlobalConfiguration.DefaultServer);
         }
 
@@ -29,8 +31,8 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory
             config.SetTimeZoneInfo(TimeZoneInfo.Utc);
             await config.MapRestierRoute<TrippinApi>(
                 "TrippinApi",
-                "api/Trippin",
-                new RestierBatchHandler(server));
+                "",
+                new TrippinBatchHandler(server));
         }
     }
 }

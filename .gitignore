@@ -1,6 +1,7 @@
 [Bb]in
 [Oo]bj
 [Tt]est[Rr]esults
+.vs
 *.suo
 *.user
 *.[Cc]ache
@@ -43,6 +44,7 @@ _[Ss]cripts
 .builds
 *.dotCover
 packages/
+project.lock.json
 # Visual C++ cache files
 ipch/
 *.aps

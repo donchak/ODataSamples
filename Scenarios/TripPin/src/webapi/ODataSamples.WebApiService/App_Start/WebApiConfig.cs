@@ -1,12 +1,12 @@
 ﻿namespace ODataSamples.WebApiService
 {
     using System.Web.Http;
-    using System.Web.OData;
-    using System.Web.OData.Batch;
-    using System.Web.OData.Builder;
-    using System.Web.OData.Extensions;
+    using System.Web.Http.Cors;
+    using Microsoft.AspNet.OData;
+    using Microsoft.AspNet.OData.Batch;
+    using Microsoft.AspNet.OData.Builder;
+    using Microsoft.AspNet.OData.Extensions;
     using Microsoft.OData.Edm;
-    using Microsoft.OData.Edm.Library;
     using ODataSamples.WebApiService.Models;
 
     public static class WebApiConfig
@@ -15,6 +15,7 @@
         {
             config.MessageHandlers.Add(new ETagMessageHandler());
             config.MapODataServiceRoute("odata", null, GetEdmModel(), new DefaultODataBatchHandler(GlobalConfiguration.DefaultServer));
+            config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
             config.EnsureInitialized();
         }
 
@@ -81,20 +82,20 @@
             var meSingleton = edmModel.EntityContainer.FindSingleton("Me") as EdmSingleton;
             var flightEntityType = edmModel.FindDeclaredType("ODataSamples.WebApiService.Models.Flight") as EdmEntityType;
 
-            var propertyAriline = flightEntityType.FindProperty("Airline") as EdmNavigationProperty;
+            var propertyAirline = flightEntityType.FindProperty("Airline") as EdmNavigationProperty;
             var propertyFrom = flightEntityType.FindProperty("From") as EdmNavigationProperty;
             var propertyTo = flightEntityType.FindProperty("To") as EdmNavigationProperty;
 
             var targetAirlines = edmModel.EntityContainer.FindEntitySet("Airlines");
             var targetAirports = edmModel.EntityContainer.FindEntitySet("Airports");
 
-            peopleEntitySet.AddNavigationTarget(propertyAriline, targetAirlines);
-            peopleEntitySet.AddNavigationTarget(propertyFrom, targetAirports);
-            peopleEntitySet.AddNavigationTarget(propertyTo, targetAirports);
+            peopleEntitySet.AddNavigationTarget(propertyAirline, targetAirlines, new EdmPathExpression("Trips/PlanItems/ODataSamples.WebApiService.Models.Flight/Airline"));
+            peopleEntitySet.AddNavigationTarget(propertyFrom, targetAirports, new EdmPathExpression("Trips/PlanItems/ODataSamples.WebApiService.Models.Flight/From"));
+            peopleEntitySet.AddNavigationTarget(propertyTo, targetAirports, new EdmPathExpression("Trips/PlanItems/ODataSamples.WebApiService.Models.Flight/To"));
 
-            meSingleton.AddNavigationTarget(propertyAriline, targetAirlines);
-            meSingleton.AddNavigationTarget(propertyFrom, targetAirports);
-            meSingleton.AddNavigationTarget(propertyTo, targetAirports);
+            meSingleton.AddNavigationTarget(propertyAirline, targetAirlines, new EdmPathExpression("Trips/PlanItems/ODataSamples.WebApiService.Models.Flight/Airline"));
+            meSingleton.AddNavigationTarget(propertyFrom, targetAirports, new EdmPathExpression("Trips/PlanItems/ODataSamples.WebApiService.Models.Flight/From"));
+            meSingleton.AddNavigationTarget(propertyTo, targetAirports, new EdmPathExpression("Trips/PlanItems/ODataSamples.WebApiService.Models.Flight/To"));
 
             #endregion
 

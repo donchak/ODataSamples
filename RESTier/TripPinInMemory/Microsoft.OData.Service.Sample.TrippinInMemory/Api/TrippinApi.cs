@@ -65,7 +65,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Api
                 var datasource = DataStoreManager.GetDataStoreInstance(Key);
                 if (datasource != null)
                 {
-                    return datasource.People.AsQueryable();
+                    return new QueryableWrapper<Person>(datasource.People.AsQueryable());
                 }
 
                 return null;
@@ -80,7 +80,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Api
                 var datasource = DataStoreManager.GetDataStoreInstance(Key);
                 if (datasource != null)
                 {
-                    return datasource.People.AsQueryable();
+                    return new QueryableWrapper<Person>(datasource.People.AsQueryable());
                 }
 
                 return null;
@@ -110,7 +110,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Api
                 var datasource = DataStoreManager.GetDataStoreInstance(Key);
                 if (datasource != null)
                 {
-                    return datasource.Airlines.AsQueryable();
+                    return new QueryableWrapper<Airline>(datasource.Airlines.AsQueryable());
                 }
 
                 return null;
@@ -125,7 +125,7 @@ namespace Microsoft.OData.Service.Sample.TrippinInMemory.Api
                 var datasource = DataStoreManager.GetDataStoreInstance(Key);
                 if (datasource != null)
                 {
-                    return datasource.Airports.AsQueryable();
+                    return new QueryableWrapper<Airport>(datasource.Airports.AsQueryable());
                 }
 
                 return null;
